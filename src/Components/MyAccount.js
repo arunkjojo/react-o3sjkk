@@ -18,12 +18,26 @@ export const MyAccount = () => {
   };
   return (
     <div className="userData">
-      <h3>ID : {id}</h3>
-      <h3>Name : {name}</h3>
-      <h3>Email : {email}</h3>
-      <h3>Theme : {theme}</h3>
-      <button onClick={saveProfile}>Save Profile</button>
-      <button>Edit</button>
+      <h2>User Information</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Theme</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{id}</td>
+            <td>{name}</td>
+            <td>{email}</td>
+            <td>{theme}</td>
+          </tr>
+        </tbody>
+      </table>
+      <button onClick={saveProfile}>Edit</button>
     </div>
   );
 };
