@@ -1,0 +1,12 @@
+.linkContainer {
+  color: gray;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.linkContainer > .headerLinks {
+  flex: 5;
+  text-decoration: 'none';
+}
