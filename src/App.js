@@ -9,7 +9,9 @@ import './style.css';
 export default function App() {
   const theme = useSelector((state) => state.user.theme);
   useEffect(() => {
-    document.body.classList.toggle(`bg-${theme}-app`, theme);
+    if (theme === 'light') var mode = 0;
+    else var mode = 1;
+    document.body.classList.toggle(`bg-dark-app`, mode);
   }, [theme]);
   return (
     <BrowserRouter>

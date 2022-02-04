@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { save_profile } from '../Redux/userSlice';
 export const Edit = () => {
@@ -31,8 +31,9 @@ export const Edit = () => {
       })
     );
   };
+
   return (
-    <div className="container editUser">
+    <div className={`container `}>
       <h3>Edit Profile</h3>
       <form>
         <div className="form-group nameField">
