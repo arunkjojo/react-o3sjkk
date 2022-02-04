@@ -7,9 +7,9 @@ import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined'
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="container">
-        <Link to="/">Dashboard</Link>{' '}
-        <Link to="/account">
+      <div className="container navbar navbar-light bg-light">
+        <Link className="link" to="/">Dashboard</Link>{' '}
+        <Link className="link" to="/account">
           <PersonOutlineOutlinedIcon />
         </Link>{' '}
       </div>

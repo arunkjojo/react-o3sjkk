@@ -2,7 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 export const userSlice = createSlice({
   name: 'user',
   initialState: {
-    id: 2786,
     name: 'Arun Jojo',
     email: 'arunkjojo@gmail.com',
     theme: 'light',
