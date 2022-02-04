@@ -41,17 +41,20 @@ export const Edit = () => {
     );
   };
 
-  useEffect(() => {
-    console.log('mounted', theme);
-    return () => {
-      console.log('un-mounted', theme);
-      dispatch(
-        change_theme({
-          userTheme: theme,
-        })
-      );
-    };
-  }, []);
+  // useEffect(() => {
+  //   console.log('mounted', theme);
+  //   // setInterval(()=>{
+  //   //   console.log('mounted a', theme)
+  //   // },3000);
+  //   return () => {
+  //     console.log('un-mounted', theme);
+  //     dispatch(
+  //       change_theme({
+  //         userTheme: theme,
+  //       })
+  //     );
+  //   };
+  // }, []);
 
   return (
     <div className={`container `}>
