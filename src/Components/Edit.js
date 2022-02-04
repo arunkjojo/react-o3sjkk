@@ -33,24 +33,27 @@ export const Edit = () => {
     );
   };
   return (
-  <>
-    <form>
-      <div className="nameField">
-        <label for="name">Name </label>
-        <input id="name" onChange={nameChange} value={userName} />
-      </div>
-      <div className="emailField">
-        <label for="email">Email </label>
-        <input id="nemail" onChange={emailChange} value={userEmail} />
-      </div>
-      <div className="themeField">
-        <label for="theme">Theme </label>
-        <input id="theme" onChange={themeChange} value={userTheme} />
-      </div>
-      <div className="saveField">
-        <button onClick={saveProfile}>Save</button>
-      </div>
-    </form>
-  </>
+    <>
+      <form>
+        <div className="nameField">
+          <label for="name">Name </label>
+          <input id="name" onChange={nameChange} value={userName} />
+        </div>
+        <div className="emailField">
+          <label for="email">Email </label>
+          <input id="nemail" onChange={emailChange} value={userEmail} />
+        </div>
+        <div className="themeField">
+          <label for="theme">Theme </label>
+          <select onChange={themeChange} value={userTheme}>
+            <option value="light">light</option>
+            <option value="dark">dark</option>
+          </select>
+        </div>
+        <div className="saveField">
+          <button onClick={saveProfile}>Save</button>
+        </div>
+      </form>
+    </>
   );
 };
