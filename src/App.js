@@ -12,13 +12,11 @@ export default function App() {
       <div
         className={`bg ${theme == 1 ? 'bg-dark' : 'bg-light'} text ${
           theme == 1 ? 'text-light' : 'text-dark'
-        } container`}
+        } container `}
       >
         <div className="navbar">
-          <Link className="link" to="/">
-            Dashboard
-          </Link>{' '}
-          <Link className="link" to="/account">
+          <Link to="/">Dashboard</Link>{' '}
+          <Link to="/account">
             <PersonOutlineOutlinedIcon />
           </Link>{' '}
         </div>
