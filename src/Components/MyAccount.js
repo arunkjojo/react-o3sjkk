@@ -14,24 +14,8 @@ export const MyAccount = () => {
           <EditIcon />
         </Link>
       </h2>
-
-      <table className="responsive">
-        <tr>
-          <th>Name</th>
-          <th>: </th>
-          <td>{name} </td>
-        </tr>
-        <tr>
-          <th>Email</th>
-          <th>: </th>
-          <td>{email} </td>
-        </tr>
-        <tr>
-          <th>Theme</th>
-          <th>: </th>
-          <td>{theme} </td>
-        </tr>
-      </table>
+      <h4>Name : {name} </h4>
+      <h4>Email : {email} </h4>
     </div>
   );
 };

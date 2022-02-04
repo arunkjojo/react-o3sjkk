@@ -61,8 +61,8 @@ export const Edit = () => {
             onChange={themeChange}
             value={userTheme}
           >
-            <option value="light">light</option>
-            <option value="dark">dark</option>
+            <option value="0">light</option>
+            <option value="1">dark</option>
           </select>
         </div>
         <div className="form-group saveField">
