@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { save_profile, change_theme } from '../Redux/userSlice';
 export const Edit = () => {
-  const name = useSelector((state) => state.user.name);
-  const email = useSelector((state) => state.user.email);
-  const theme = useSelector((state) => state.user.theme);
+  var name = useSelector((state) => state.user.name);
+  var email = useSelector((state) => state.user.email);
+  var theme = useSelector((state) => state.user.theme);
 
   const [userName, setUserName] = useState(name);
   const [userEmail, setUserEmail] = useState(email);
@@ -21,27 +21,17 @@ export const Edit = () => {
   const themeChange = (e) => {
     setUserTheme(e.target.value);
     dispatch(
-      save_profile({
-        userName: name,
-        userEmail: email,
+      change_theme({
         userTheme: e.target.value,
       })
     );
   };
-  useEffect(() => {
-    // console.log('mounted', theme);
-    return () => {
-      // console.log('un-mounted', theme);
-      dispatch(
-        change_theme({
-          userTheme: theme,
-        })
-      );
-    };
-  }, []);
 
+  console.log(theme);
   const saveProfile = (e) => {
     e.preventDefault();
+    theme = userTheme;
+    console.log('save', theme);
     dispatch(
       save_profile({
         userName: userName,
@@ -50,6 +40,18 @@ export const Edit = () => {
       })
     );
   };
+
+  useEffect(() => {
+    console.log('mounted', theme);
+    return () => {
+      console.log('un-mounted', theme);
+      dispatch(
+        change_theme({
+          userTheme: theme,
+        })
+      );
+    };
+  }, []);
 
   return (
     <div className={`container `}>
