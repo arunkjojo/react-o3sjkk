@@ -1,19 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import { Dashboard } from './Components/Dashboard';
 import { MyAccount } from './Components/MyAccount';
 import { Edit } from './Components/Edit';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import { useSelector } from 'react-redux';
+import './style.css';
 export default function App() {
   const theme = useSelector((state) => state.user.theme);
+  useEffect(() => {
+    document.body.classList.toggle(`bg-${theme}-app`, theme);
+  }, [theme]);
   return (
     <BrowserRouter>
-      <div
-        className={`bg ${theme == 1 ? 'bg-dark' : 'bg-light'} text ${
-          theme == 1 ? 'text-light' : 'text-dark'
-        } container `}
-      >
+      <div className={`app container `}>
         <div className="navbar">
           <Link to="/">Dashboard</Link>{' '}
           <Link to="/account">

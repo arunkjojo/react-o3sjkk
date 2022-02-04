@@ -8,12 +8,11 @@ export const MyAccount = () => {
   const theme = useSelector((state) => state.user.theme);
   return (
     <div className="container userData">
-      <h2>
-        User Information{' '}
-        <Link to="/edit">
-          <EditIcon />
-        </Link>
-      </h2>
+      <h3>User Information </h3>
+      <Link to="/edit">
+        <EditIcon />
+      </Link>
+      <hr />
       <h4>Name : {name} </h4>
       <h4>Email : {email} </h4>
     </div>

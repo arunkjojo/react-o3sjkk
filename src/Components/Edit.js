@@ -33,7 +33,7 @@ export const Edit = () => {
   };
   return (
     <div className="container editUser">
-      <h2>User Edit</h2>
+      <h3>Edit Profile</h3>
       <form>
         <div className="form-group nameField">
           <label for="name">Name </label>
@@ -61,8 +61,8 @@ export const Edit = () => {
             onChange={themeChange}
             value={userTheme}
           >
-            <option value="0">light</option>
-            <option value="1">dark</option>
+            <option value="light">light</option>
+            <option value="dark">dark</option>
           </select>
         </div>
         <div className="form-group saveField">

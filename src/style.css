@@ -1,0 +1,10 @@
+body {
+  background-color: azure;
+  color: black;
+  height: 100%;
+}
+
+body.bg-dark-app {
+  background-color: black !important;
+  color: white !important;
+}

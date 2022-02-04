@@ -4,7 +4,7 @@ export const userSlice = createSlice({
   initialState: {
     name: 'Arun Jojo',
     email: 'arunkjojo@gmail.com',
-    theme: 0,
+    theme: 'light',
   },
   reducers: {
     save_profile: (state, action) => {
