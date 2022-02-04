@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Header } from './Header';
 import { useSelector, useDispatch } from 'react-redux';
 import { save_profile } from '../Redux/userSlice';
 export const Edit = () => {
@@ -33,8 +32,9 @@ export const Edit = () => {
     );
   };
   return (
-    <>
-      <form>
+    <div className="editUser">
+      <h2>User Edit</h2>
+      <form className="form-control">
         <div className="nameField">
           <label for="name">Name </label>
           <input id="name" onChange={nameChange} value={userName} />
@@ -54,6 +54,6 @@ export const Edit = () => {
           <button onClick={saveProfile}>Save</button>
         </div>
       </form>
-    </>
+    </div>
   );
 };

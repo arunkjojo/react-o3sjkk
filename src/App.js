@@ -1,14 +1,22 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import { Header } from './Components/Header';
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { Dashboard } from './Components/Dashboard';
+import { MyAccount } from './Components/MyAccount';
 import { Edit } from './Components/Edit';
-// import './style.css';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 export default function App() {
   return (
     <BrowserRouter>
+      <div className="container">
+        <Link to="/">Dashboard</Link>{' '}
+        <Link to="/account">
+          <PersonOutlineOutlinedIcon />
+        </Link>{' '}
+      </div>
       <Routes>
-        <Route exat path="/" element={<Header />} />
-        <Route path="edit" element={<Edit />} />
+        <Route exact path="/" element={<Dashboard />} />
+        <Route path="/account" element={<MyAccount />} />
+        <Route path="/edit" element={<Edit />} />
       </Routes>
     </BrowserRouter>
   );
